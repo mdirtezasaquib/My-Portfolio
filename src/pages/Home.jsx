@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import myPic from "../assets/MyPhoto.jpg";
-import resumePDF from "../assets/my-resume.pdf";
-import { FaDownload } from "react-icons/fa";
+import resumePDF from "../assets/final-resume.pdf";
+import { FaDownload, FaEye } from "react-icons/fa";
 
 export default function Home() {
   const fullName = "Md Irteza Saquib";
@@ -34,8 +34,6 @@ export default function Home() {
 
   return (
     <section className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-6 bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      
-      
       <div className="md:w-1/2 text-center md:text-left space-y-6">
         <h2 className="text-4xl md:text-6xl font-semi-bold leading-tight">
           Hi, I'm{" "}
@@ -49,26 +47,46 @@ export default function Home() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="text-lg md:text-xl text-gray-300"
+          className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed sm:leading-loose tracking-wide text-justify sm:text-left px-2 sm:px-0"
         >
           I'm a Full Stack Developer specializing in{" "}
-          <span className="text-yellow-400 font-semibold">Java + Spring Boot</span> &{" "}
-          <span className="text-yellow-400 font-semibold">React , MongoDB </span>. I specialize in building high-performance, scalable, and visually stunning web applications that deliver exceptional user experiences.
+          <span className="text-yellow-400 font-semibold">
+            Java + Spring Boot
+          </span>{" "}
+          &{" "}
+          <span className="text-yellow-400 font-semibold">React, MongoDB</span>.{" "}
+          <br className="sm:hidden" />I specialize in building high-performance,
+          scalable, and visually stunning web applications that deliver
+          exceptional user experiences.
         </motion.p>
 
-        <motion.a
-         href={resumePDF}
-         download
-         whileHover={{ scale: 1.1 }}
-         whileTap={{ scale: 0.95 }}
-         transition={{ type: "spring", stiffness: 300 }}
-         className=" mt-4 px-7 py-3 rounded-lg text-lg font-semibold bg-gradient-to-r from-yellow-500 to-orange-500 text-black shadow-md hover:shadow-lg transition flex items-center justify-center gap-2 w-60"
-         >
-        <FaDownload className="text-lg" />
-        Download Resume
-        </motion.a>
-      </div>
+        <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+          <motion.a
+            href={resumePDF}
+            download
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="flex-1 min-w-[140px] sm:min-w-[160px] max-w-[200px] px-4 py-3 rounded-lg text-sm sm:text-base font-semibold bg-gradient-to-r from-yellow-500 to-orange-500 text-black shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
+          >
+            <FaDownload className="text-lg" />
+            Download Resume
+          </motion.a>
 
+          <motion.a
+            href={resumePDF}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="flex-1 min-w-[140px] sm:min-w-[160px] max-w-[200px] px-4 py-3 rounded-lg text-sm sm:text-base font-semibold bg-gradient-to-r from-green-400 to-green-500 text-black shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
+          >
+            <FaEye className="text-lg" />
+            View Resume
+          </motion.a>
+        </div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}

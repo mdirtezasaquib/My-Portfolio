@@ -24,7 +24,7 @@ export default function Navbar() {
     <nav className="bg-black/60 backdrop-blur-xl shadow-lg sticky top-0 z-50 border-b border-yellow-500 h-18">
       <div className="max-w-7xl mx-auto px-4 py-5 flex justify-between items-center">
         <h1 className="text-2xl font-semibold bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 text-transparent bg-clip-text tracking-widest">
-          MyPortfolio
+          @DevSaquîb
         </h1>
 
         

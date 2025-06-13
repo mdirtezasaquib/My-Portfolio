@@ -29,7 +29,7 @@ export default function Skills() {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-center px-6 py-16">
+    <section className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-center px-6 py-16">
       <h2 className="text-4xl font-bold text-yellow-400 mb-12"> My Skills</h2>
 
       <div className="max-w-6xl mx-auto grid gap-12 md:grid-cols-2 lg:grid-cols-4">

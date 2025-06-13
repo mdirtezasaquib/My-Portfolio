@@ -1,28 +1,64 @@
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../pages/ProjectCard";
+
+import jobThumb from "../assets/job-port.jpg";
+import webhouseIndia from "../assets/web.jpg";
+import musicThumb from "../assets/sonix.jpg";
+import calculator from "../assets/calculator.jpg";
+import retrivo from "../assets/retrivo.jpg";
+import swadThumb from "../assets/swad-seva.jpg";
 
 export default function Projects() {
   const projectList = [
+     {
+      title: "Swad Seva Food App",
+      desc: "Food ordering app with menu, ratings, and user feedback system.",
+      tech: "React, Tailwind, Spring Boot, MongoDB",
+      github: "https://github.com/mdirtezasaquib/swad-seva-frontend",
+      live: "https://swad-seva-saquib.netlify.app/",
+      image: swadThumb,
+    },
+
     {
       title: "Job Portal",
-      desc: "A full-featured job portal using Spring Boot and MongoDB.",
-      tech: "React, Tailwind, Spring Boot, MongoDB",
+      desc: "Full-featured platform with login, job listings, and admin panel.",
+      tech: "React, Tailwind CSS, Spring Boot, MongoDB",
       github: "#",
       live: "#",
+      image: jobThumb,
     },
     {
-      title: "E-commerce Site",
-      desc: "Online shopping site with cart, admin panel and authentication.",
+      title: "WebHouse India",
+      desc: "WebHouse India: Modern, responsive frontend project with clean UI.",
+      tech: "React, Tailwind CSS, JavaScript",
+      github: "https://github.com/mdirtezasaquib/web-House-India",
+      live: "https://webhouse-by-irtezasaquib.netlify.app/",
+      image: webhouseIndia,
+    },
+    {
+      title: "Sonix Music App",
+      desc: "Listen to your favorite music with smooth playback and dark mode.",
+      tech: "JavaScript, Tailwind CSS, Audio API",
+      github: "https://github.com/mdirtezasaquib/Sonix-music-app",
+      live: "https://sonix-saquib.netlify.app/",
+      image: musicThumb,
+    },
+    {
+      title: "Calculator",
+      desc: "Simple, responsive calculator app with clean UI and instant results.",
+      tech: "HTML, CSS, JavaScript",
+      github: "https://github.com/mdirtezasaquib/Calculator",
+      live: "https://irtezacalculator.netlify.app/",
+      image: calculator,
+    },
+    {
+      title: "Retrivo",
+      desc: "Retrivo: Lost and Found app to report, search, and recover items.",
       tech: "React, Spring Boot, MongoDB",
-      github: "#",
-      live: "#",
+      github: "https://github.com/mdirtezasaquib/Lost-Found",
+      live: "https://lost-found-com.netlify.app/",
+      image: retrivo,
     },
-    {
-      title: "Music App",
-      desc: "Stream music with playback and dark mode support.",
-      tech: "React, Tailwind, Audio APIs",
-      github: "#",
-      live: "#",
-    },
+   
   ];
 
   return (
@@ -30,10 +66,11 @@ export default function Projects() {
       id="projects"
       className="min-h-screen px-6 py-16 bg-gradient-to-br from-black via-gray-900 to-black text-white"
     >
-      <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text mb-8 tracking-widest">
+      <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 to-orange-500 text-transparent bg-clip-text tracking-widest">
         My Projects
       </h2>
-      <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {projectList.map((proj, index) => (
           <ProjectCard key={index} {...proj} />
         ))}
