@@ -5,13 +5,13 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
+import BottomNavbar from "./components/BottomNavbar"; // 👈 Add this
 
 export default function App() {
   return (
     <>
       <Navbar />
 
-      
       <section id="home">
         <Home />
       </section>
@@ -29,6 +29,8 @@ export default function App() {
       </section>
 
       <Footer />
+
+      <BottomNavbar /> 
     </>
   );
 }
