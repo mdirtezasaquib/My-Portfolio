@@ -69,7 +69,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-yellow-400" />
-              <a href="mailto:mdsaquib140802@gmail.com" className="hover:text-yellow-500 transition">mdsaquib140802@gmail.com</a>
+              <a href="mailto:mdsaquib140802@gmail.com" className="hover:text-yellow-500 transition">devsaquib01@gmail.com</a>
             </li>
           </ul>
         </div>
