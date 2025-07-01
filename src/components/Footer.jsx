@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm h-20">
         © 2025 <span className="text-yellow-400 font-semibold">Md Irteza Saquib</span>. All rights reserved.
       </div>
     </footer>
