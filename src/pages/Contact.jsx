@@ -10,6 +10,7 @@ export default function Contact() {
   });
 
   const [responseMsg, setResponseMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData((prev) => ({
@@ -20,6 +21,7 @@ export default function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true); 
 
     try {
       const res = await fetch("https://portfoliobackend-z1o2.onrender.com/Contact/create/contact", {
@@ -39,6 +41,8 @@ export default function Contact() {
     } catch (error) {
       console.error("Error:", error);
       setResponseMsg("❌ Server Error");
+    } finally {
+      setIsLoading(false); 
     }
   };
 
@@ -101,16 +105,27 @@ export default function Contact() {
             className="w-full p-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-500"
             required
           ></textarea>
-         <motion.button
+
+          <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             type="submit"
+            disabled={isLoading}
             className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center gap-2"
           >
-          <FaPaperPlane className="text-lg" />
-           Send Message
-         </motion.button>
-          {responseMsg && <p className="text-green-400 pt-2">{responseMsg}</p>}
+            {isLoading ? (
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+            ) : (
+              <>
+                <FaPaperPlane className="text-lg" />
+                Send Message
+              </>
+            )}
+          </motion.button>
+
+          {responseMsg && (
+            <p className="text-green-400 pt-2">{responseMsg}</p>
+          )}
         </motion.form>
 
         <motion.div
@@ -118,9 +133,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
           className="flex justify-center gap-6 mt-10 text-2xl"
-        >
-        
-        </motion.div>
+        ></motion.div>
 
         <p className="text-gray-400 mt-6 text-sm">📍 Based in Bihar, India</p>
       </div>
