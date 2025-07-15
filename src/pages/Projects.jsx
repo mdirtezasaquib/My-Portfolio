@@ -6,9 +6,22 @@ import musicThumb from "../assets/sonix.jpg";
 import calculator from "../assets/calculator.jpg";
 import retrivo from "../assets/retrivo.jpg";
 import swadThumb from "../assets/swad-seva.jpg";
+import whatsapp from "../assets/whatsapp.jpg";
 
 export default function Projects() {
   const projectList = [
+
+
+    {
+      title: "WhatsApp Clone",
+      desc: "WhatsApp Clone app showcasing real-time chat and responsive UI.",
+      tech: "React, Tailwind, Spring Boot, MongoDB",
+      github: "https://github.com/mdirtezasaquib/whatsapp-clone",
+      live: "https://irtezabywhatsap.netlify.app/",
+      image: whatsapp,
+    },
+
+
      {
       title: "Swad Seva Food App",
       desc: "Food ordering app with menu, ratings, and user feedback system.",
@@ -22,7 +35,7 @@ export default function Projects() {
       title: "Job Portal",
       desc: "Full-featured platform with login, job listings, and admin panel.",
       tech: "React, Tailwind CSS, Spring Boot, MongoDB",
-      github: "#",
+      github: "https://github.com/mdirtezasaquib/JobPortalBackend",
       live: "#",
       image: jobThumb,
     },

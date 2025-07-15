@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import myPic from "../assets/MyPhoto.jpg";
-import resumePDF from "../assets/final-resume.pdf";
+import resumePDF from "../assets/final-current.pdf";
 import { FaDownload, FaEye } from "react-icons/fa";
 
 export default function Home() {

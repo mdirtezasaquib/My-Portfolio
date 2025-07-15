@@ -22,7 +22,7 @@ export default function Contact() {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:8080/Contact/create/contact", {
+      const res = await fetch("https://portfoliobackend-z1o2.onrender.com/Contact/create/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
